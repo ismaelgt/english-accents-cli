@@ -1,0 +1,29 @@
+{
+  "name": "english-accents-cli",
+  "version": "0.0.1",
+  "description": "Command Line Interface for English Accents Map",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismaelgt/english-accents-cli.git"
+  },
+  "author": "Ismael González Trujillo <ismael.gonzaleztrujillo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ismaelgt/english-accents-cli/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "got": "^7.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "standard": "^10.0.2"
+  },
+  "xo": {
+    "space": true
+  }
+}
