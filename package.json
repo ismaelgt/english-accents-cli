@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Command Line Interface for English Accents Map",
   "bin": "cli.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "test": "xo && ava"
   },
