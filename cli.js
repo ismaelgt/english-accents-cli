@@ -3,7 +3,6 @@
 const chalk = require('chalk')
 const got = require('got')
 const inquirer = require('inquirer')
-const _ = require('lodash')
 
 const FIREBASE_DB_URL = 'https://english-accents-map.firebaseio.com/'
 const HTTP_REQUEST_OPTIONS = {
@@ -16,11 +15,15 @@ function getCountries () {
 }
 
 function promptSelectCountry (countries) {
+  const choices = Object.keys(countries)
+    .map(key => Object.assign(countries[key], {value: key}))
+    .filter(country => country.published)
+
   return inquirer.prompt([{
     type: 'list',
     name: 'key',
     message: 'Select country:',
-    choices: _.map(countries, (value, key) => ({name: value.name, value: key}))
+    choices
   }])
 }
 
@@ -31,11 +34,15 @@ function getAccents (selectedCountryKey) {
 }
 
 function promptSelectAccent (accents) {
+  const choices = Object.keys(accents)
+    .map(key => Object.assign(accents[key], {value: accents[key].videos}))
+    .sort((a, b) => a.name < b.name ? -1 : 1)
+
   return inquirer.prompt([{
     type: 'list',
     name: 'videos',
     message: 'Select accent:',
-    choices: _.map(accents, value => ({name: value.name, value: value.videos}))
+    choices
   }])
 }
 
