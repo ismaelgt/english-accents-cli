@@ -2,21 +2,28 @@
   "name": "english-accents-cli",
   "version": "0.0.1",
   "description": "Command Line Interface for English Accents Map",
-  "bin": "cli.js",
-  "engines": {
-    "node": ">=4"
+  "keywords": [
+    "cli",
+    "command-line",
+    "english"
+  ],
+  "bugs": {
+    "url": "https://github.com/ismaelgt/english-accents-cli/issues"
   },
-  "scripts": {
-    "test": "xo && ava"
+  "license": "MIT",
+  "author": {
+    "name": "Ismael González Trujillo",
+    "email": "ismael.gonzaleztrujillo@gmail.com"
+  },
+  "bin": {
+    "english-accents": "cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ismaelgt/english-accents-cli.git"
+    "url": "https://github.com/ismaelgt/english-accents-cli.git"
   },
-  "author": "Ismael González Trujillo <ismael.gonzaleztrujillo@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ismaelgt/english-accents-cli/issues"
+  "scripts": {
+    "test": "xo && ava"
   },
   "dependencies": {
     "chalk": "^2.0.1",
@@ -30,6 +37,9 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-standard": "^3.0.1",
     "xo": "^0.18.2"
+  },
+  "engines": {
+    "node": ">=4"
   },
   "xo": {
     "extends": "standard"
