@@ -26,13 +26,14 @@
     "test": "xo && ava"
   },
   "dependencies": {
-    "chalk": "^2.0.1",
+    "chalk": "^2.1.0",
     "got": "^7.1.0",
-    "inquirer": "^3.2.1"
+    "inquirer": "^3.2.1",
+    "meow": "^3.7.0"
   },
   "devDependencies": {
     "ava": "^0.21.0",
-    "eslint": "^4.3.0",
+    "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-standard": "^3.0.1",
