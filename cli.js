@@ -3,9 +3,9 @@
 const meow = require('meow')
 const accents = require('.')
 
-const cli = meow(`
+meow(`
   Usage
     $ english-accents
 `)
 
-accents(cli.input[0])
+accents()
